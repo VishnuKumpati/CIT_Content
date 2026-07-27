@@ -155,26 +155,7 @@ Understanding deterministic vs probabilistic systems is not academic — it dire
 - **Railway Booking Systems:** Confirming a berth once payment succeeds is deterministic (a fixed rule); predicting "your waitlisted ticket has a 74% chance of confirmation" is probabilistic.
 ---
 
-## 5. Worked Example
-
-**Scenario:** You are asked to classify three systems used in a food-delivery app as deterministic or probabilistic, and justify each answer.
-
-| System | Input | Output | Classification | Why? |
-|---|---|---|---|---|
-| Bill calculator | Item prices + delivery fee + GST | Final amount to pay | **Deterministic** | Fixed formula: `sum(items) + delivery_fee + gst`. Same input always gives the same total. |
-| "Recommended for you" section | Your past 10 orders | A list of 5 suggested dishes | **Probabilistic** | Based on likelihood patterns from your order history and similar users; can vary slightly across sessions or re-training. |
-| AI chat support answering "Where is my order?" in natural language | Order ID + your question | A natural-language reply | **Probabilistic (text generation)**, but should pull the *actual* order status from a deterministic database lookup first | The order status itself (deterministic fact from the database) should never be "guessed" by the AI — only the *phrasing* of the reply is probabilistic. |
-
-**Step-by-step reasoning used to reach each answer:**
-
-1. Ask: *"If I give this system the exact same input 100 times, will I get the exact same output every time?"*
-2. If **yes** → deterministic (rule-based, fixed logic).
-3. If **no**, but the outputs cluster around a "most likely" answer → probabilistic (likelihood-based).
-4. If the system mixes both (a probabilistic AI wrapped around a deterministic database fact) → identify **which specific part** is deterministic and which part is probabilistic. This is one of the most important real-world skills you will build in this program — most production AI systems are a *hybrid* of both.
-
----
-
-## 6. Key Takeaways
+## 5. Key Takeaways
 
 - **Computation** = input → defined steps → output. Every piece of software, from a calculator to Claude, is fundamentally computation.
 - **Deterministic systems**: same input always gives the same output. Used where predictability and trust are critical (banking, ATMs, records).
@@ -188,7 +169,7 @@ Understanding deterministic vs probabilistic systems is not academic — it dire
 
 ---
 
-## 7. Reference Links
+## 6. Reference Links
 
 - [Anthropic Documentation — How Claude Works](https://docs.claude.com/) — official documentation on model behaviour and API usage.
 - [Google Machine Learning Crash Course — Framing an ML Problem](https://developers.google.com/machine-learning/crash-course) — beginner-friendly grounding in probabilistic prediction.
