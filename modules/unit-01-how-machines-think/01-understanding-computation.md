@@ -151,14 +151,8 @@ This is exactly why asking Claude the same question twice can give you two diffe
 ## 4. Real World Application
 
 Understanding deterministic vs probabilistic systems is not academic — it directly shapes real engineering decisions:
-
-- **Banking / FinTech:** A UPI transaction engine must be strictly deterministic — the same debit request must always produce the same, exact ledger update. Banks never use a probabilistic AI model to decide "how much money to deduct."
-- **Healthcare:** An AI system that flags a possible medical condition from a scan is probabilistic (it gives a likelihood, e.g., "82% probability of anomaly"), so it is designed to always route to a human doctor for the final, deterministic decision — this connects directly to the **Judgment Framework** you'll study in Week 9.
 - **E-commerce / Food Delivery:** Calculating your bill total (deterministic — fixed formula) versus recommending "you might also like these dishes" (probabilistic — based on likelihood patterns from past orders).
 - **Railway Booking Systems:** Confirming a berth once payment succeeds is deterministic (a fixed rule); predicting "your waitlisted ticket has a 74% chance of confirmation" is probabilistic.
-- **Vernacular AI Translation:** Translating a Hindi sentence to Tamil using an AI model is probabilistic — the model chooses the most likely translation from many possible valid phrasings, which is why re-running the same translation request can occasionally produce slightly different (but still correct) wording.
-- **AI Chatbots / Copilots:** A customer-support chatbot answering "What is your refund policy?" may phrase its answer slightly differently each time — because it's generating probabilistic text — even though the underlying policy (fetched from a document, ideally via RAG, which you'll study in Week 14) remains fixed.
-
 ---
 
 ## 5. Worked Example
